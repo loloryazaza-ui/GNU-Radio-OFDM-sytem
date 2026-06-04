@@ -1,0 +1,92 @@
+================================================================================
+OFDM SYSTEM ON HackRF One – EXPERIMENTAL RESULTS
+================================================================================
+
+Date: [дата последнего обновления]
+Author: [ваше имя]
+Repository: [ссылка на GitHub]
+
+================================================================================
+1. SIMULATION MODELS (Baseline)
+================================================================================
+
+1.1 Simple OFDM (GNU Radio tutorial)
+   - Packet loss: ~0%
+   - BER: 0%
+   - EVM: 0%
+   - Note: Ideal channel, no noise
+
+1.2 Extended transmitter + receiver (complete system)
+   - Packet loss: 1.6%
+   - BER: ≈0%
+   - EVM: 0%
+   - Note: AWGN channel, noise_voltage = 0
+
+================================================================================
+2. REAL RADIO CHANNEL – 446 MHz
+================================================================================
+
+2.1 Both HackRF One on same computer (shared synchronization)
+   - Packet loss: 21.19% (σ = 3.07%)
+   - BER: 35.2% (σ = 0.8%)
+   - EVM: 0%
+   - Distance: 2 m (LOS)
+   - TX settings: AmpOn=1, VGA=47 dB
+   - RX settings: LNA=off, IF=16 dB, VGA=47 dB
+
+2.2 Each HackRF One on separate computer (no shared synchronization)
+   - Packet loss: 15.29% (σ = 0.30%)
+   - BER: 40.4% (σ = 4.4%)
+   - EVM: 0%
+   - Distance: 2 m (LOS)
+   - Note: Schmidl–Cox synchronization active
+
+================================================================================
+3. REAL RADIO CHANNEL – 2400 MHz (2.4 GHz)
+================================================================================
+
+3.1 Both HackRF One on same computer (shared synchronization)
+   - Packet loss: 96.7% (σ = 0.1%)
+   - BER: 38.3% (σ = 4.4%)
+   - EVM: 0%
+   - Note: High interference from Wi-Fi / Bluetooth
+
+3.2 Each HackRF One on separate computer (no shared synchronization)
+   - Packet loss: 97.2% (σ = 0.1%)
+   - BER: 35.8% (σ = 1.6%)
+   - EVM: 0%
+   - Note: System practically non-functional at this frequency
+
+================================================================================
+4. SUMMARY & COMPARISON
+================================================================================
+
+| Configuration                    | Frequency | Packet Loss | BER   | EVM |
+|----------------------------------|-----------|-------------|-------|-----|
+| Simulation (baseline)            | —         | 1.6%        | ≈0%   | 0%  |
+| Same computer (sync)             | 446 MHz   | 21.2%       | 35.2% | 0%  |
+| Two computers (no sync)          | 446 MHz   | 15.3%       | 40.4% | 0%  |
+| Same computer (sync)             | 2400 MHz  | 96.7%       | 38.3% | 0%  |
+| Two computers (no sync)          | 2400 MHz  | 97.2%       | 35.8% | 0%  |
+
+================================================================================
+5. CONCLUSIONS
+================================================================================
+
+- System works correctly at 446 MHz (both configurations)
+- 2.4 GHz is unusable due to external interference
+- EVM = 0% in all real experiments – good demodulation in successfully received packets
+- Schmidl–Cox synchronization successfully compensates CFO in independent computers
+
+================================================================================
+6. RAW DATA (if available)
+================================================================================
+
+[Здесь можно вставить сырые данные, например:
+- список значений BER для каждого прогона
+- список значений потерь пакетов
+- количество переданных/принятых пакетов]
+
+================================================================================
+END OF FILE
+================================================================================
