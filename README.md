@@ -21,10 +21,10 @@ This directory contains four progressively complex OFDM models:
 
 | Folder | Description |
 |--------|-------------|
-| `1_simple_ofdm/` | Basic OFDM implementation based on the official GNU Radio tutorial. Demonstrates fundamental principles. |
-| `2_extended_tx/` | Extended transmitter with custom preamble, pilot carriers, header/payload formatting, and CRC32 generation. |
-| `3_extended_rx/` | Extended receiver with Schmidl–Cox synchronization, CFO correction, channel estimation, equalization, and CRC32 check. |
-| `4_complete_system/` | Full extended transceiver combining the extended transmitter and receiver. |
+| `simple_ofdm/` | Basic OFDM implementation based on the official GNU Radio tutorial. Demonstrates fundamental principles. |
+| `extended_TX/` | Extended transmitter with custom preamble, pilot carriers, header/payload formatting, and CRC32 generation. |
+| `extended_RX/` | Extended receiver with Schmidl–Cox synchronization, CFO correction, channel estimation, equalization, and CRC32 check. |
+| `full/` | Full extended transceiver combining the extended transmitter and receiver. |
 
 ### Real Radio Channel Directory (`/real_radio_channel`)
 
