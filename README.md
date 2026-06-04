@@ -3,16 +3,15 @@
 This repository contains the complete implementation of an OFDM (Orthogonal Frequency Division Multiplexing) transceiver system developed as part of a master's thesis. The system includes simulation models and real hardware implementations using HackRF One SDR platforms.
 
 ## Repository Structure
-├── simulation/
-│ ├── 1_simple_ofdm/ # Basic OFDM system (GNU Radio tutorial example)/
-│ ├── 2_extended_tx/ # Extended transmitter model/
-│ ├── 3_extended_rx/ # Extended receiver model/
-│ └── 4_complete_system/ # Full extended transceiver system/
-│/
-└── real_radio_channel/# Consist Extended model which can be used in real Radio Channel using HackRF One or any other SDR-platforms/
-├── single_computer/ # Both HackRF One on one computer (shared sync)/
-├── two_computers/ # HackRF One on two independent computers/
-└── results/ # Experimental data, graphs, constellation screenshots/
+simulation/
+├── 1_simple_ofdm/ # Basic OFDM system (GNU Radio tutorial example)
+├── 2_extended_tx/ # Extended transmitter model
+├── 3_extended_rx/ # Extended receiver model
+├── 4_complete_system/ # Full extended transceiver system
+├── 5_real_radio_channel/ # Extended model for real radio channel (HackRF One / other SDR)
+├── 6_single_computer/ # Both HackRF One on one computer (shared sync)
+├── 7_two_computers/ # HackRF One on two independent computers
+└── 8_results/ # Experimental data, graphs, constellation screenshots
 ## Description
 
 ### Simulation Directory (`/simulation`)
